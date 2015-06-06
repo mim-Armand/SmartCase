@@ -1,5 +1,5 @@
-var username = smartcase;
-var pass = pass;
+var username = "SmartCase";
+var pass = "password";
 function checkAuth(){
     var u = $("#use").val();
     var p = $("#pas").val();

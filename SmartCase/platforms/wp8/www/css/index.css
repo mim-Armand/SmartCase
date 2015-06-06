@@ -212,7 +212,7 @@ h1 {
   font-size: 2em;
   color: #fff;
   background: #23232e;
-  height: 50px;
+  /*height: 50px;*/
     border-top-left-radius: 10px;
     -webkit-border-top-left-radius: 10px;
     -moz-border-top-left-radius: 10px;
@@ -442,7 +442,7 @@ label.lbl-3 {
       margin: 1.1em 0 0;
     }
     .head-info {
-      height: 35px;
+      /*height: 35px;*/
       }
     label.lbl-1 {
       margin: 8px 10px 0px 0px;
@@ -500,12 +500,6 @@ label.lbl-3 {
 #btn_login:active, #btn_info:active{
     background: gold;
 }
-#page_start{
-    
-}
-#page_login{
-    display: none;
-}
 .btn_footer{
   font-size: 30px;
   color: #fff;
@@ -538,4 +532,71 @@ label.lbl-3 {
     -webkit-transition: 0.3s all;
     -moz-transition: 0.3s all;
     -o-transition: 0.3s all;
+}
+.avatar{
+    margin: 12px;
+}
+.hedear_name>span{
+    position: absolute;
+    top: 30px;
+    text-align: left;
+    color: #808080;
+    font-size: 12px;
+    left: 129px;
+}
+#first_name{
+    font-weight: bolder;
+    font-size: 18px;
+}
+.hedear_name>img{
+    position: relative;
+    left: -75px;
+}
+.list{
+    font-size: 15px;
+    text-transform: none;
+    font-weight: normal;
+    color: rgb(180,180,180);
+    text-align: left;
+}
+.list>li{
+    height: 36px;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+    padding: 12px;
+}
+
+.list_icons{
+    font-size: 36px;
+}
+.list_horiz>li{
+    float: left;
+}
+.luggage_info{
+    font-size: 15px;
+float: right;
+text-align: left;
+width: 150px;
+}
+small{
+    font-size: .45em;
+}
+b{
+    font-weight: bold;
+}
+#rushbag{
+    top: -6px;
+    position: relative;
+}
+.detail_info{
+    color: #666;
+}
+.detail_info>b{
+    color: #999;
+}
+/*======================================================================================*/
+#page_start{
+    
+}
+#page_login{
+    display: none;
 }

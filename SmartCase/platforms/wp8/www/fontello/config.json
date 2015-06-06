@@ -215,6 +215,12 @@
       "src": "fontawesome"
     },
     {
+      "uid": "297fe6c2ef08198b03d706ba52f51b7f",
+      "css": "flight",
+      "code": 59439,
+      "src": "fontawesome"
+    },
+    {
       "uid": "5ccf1ed249fd9d723ec1ce8629a9f507",
       "css": "suitcase-1",
       "code": 59396,
@@ -224,6 +230,18 @@
       "uid": "7432077e6a2d6aa19984ca821bb6bbda",
       "css": "bug",
       "code": 59429,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5eacf9f8805e2c0bc306dcd1e709db16",
+      "css": "taxi",
+      "code": 59434,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5b17c7263caa553039655f2fef81ecaf",
+      "css": "bus",
+      "code": 59435,
       "src": "fontawesome"
     },
     {
@@ -239,6 +257,12 @@
       "src": "fontawesome"
     },
     {
+      "uid": "8a67014b864fb93503348593979ddce3",
+      "css": "wheelchair",
+      "code": 59440,
+      "src": "fontawesome"
+    },
+    {
       "uid": "2cfb3f2b46b34a1790aec0aa846297b6",
       "css": "menu",
       "code": 59405,
@@ -248,6 +272,18 @@
       "uid": "3a230e539a4f3b904debd04c6c155034",
       "css": "help",
       "code": 59415,
+      "src": "entypo"
+    },
+    {
+      "uid": "8663320a860b00f26e94d3d15c9ba99a",
+      "css": "clock",
+      "code": 59410,
+      "src": "entypo"
+    },
+    {
+      "uid": "89eb512cb82a1c3fe83cb16134f9876c",
+      "css": "back-in-time",
+      "code": 59409,
       "src": "entypo"
     },
     {
@@ -275,9 +311,21 @@
       "src": "typicons"
     },
     {
+      "uid": "gruasbs60jlu9us53csv9q7nnwy4d990",
+      "css": "address",
+      "code": 59433,
+      "src": "typicons"
+    },
+    {
       "uid": "gjt8ba5q0n3nn8ptw6324sflr8qoaeam",
       "css": "location",
       "code": 59403,
+      "src": "typicons"
+    },
+    {
+      "uid": "bd517dbd6ccbc464f6d80efca97abb7d",
+      "css": "doc-add",
+      "code": 59432,
       "src": "typicons"
     },
     {
@@ -296,6 +344,48 @@
       "uid": "9e717a7080503cfe84c7c7bd336ffe5f",
       "css": "wrench-outline",
       "code": 59404,
+      "src": "typicons"
+    },
+    {
+      "uid": "e5e2804a6d7681eb37e80a1fc380fe49",
+      "css": "wristwatch",
+      "code": 59416,
+      "src": "typicons"
+    },
+    {
+      "uid": "cb8b402e2efdc57d6d37ad7d3da819fe",
+      "css": "stopwatch",
+      "code": 59431,
+      "src": "typicons"
+    },
+    {
+      "uid": "f7b9bc563b87218a2ed804cc71a6eb9c",
+      "css": "fast-fw-outline",
+      "code": 59397,
+      "src": "typicons"
+    },
+    {
+      "uid": "94656a720f169a0fc78c5a942e0c7112",
+      "css": "fast-fw",
+      "code": 59406,
+      "src": "typicons"
+    },
+    {
+      "uid": "db7651b88bb33a590710f551bfbbd371",
+      "css": "plane-outline",
+      "code": 59436,
+      "src": "typicons"
+    },
+    {
+      "uid": "8f73806c205d38d9412c340f93ed0c7a",
+      "css": "coffee",
+      "code": 59437,
+      "src": "typicons"
+    },
+    {
+      "uid": "c2e02247804b8372740de0b76311f1ad",
+      "css": "beer",
+      "code": 59438,
       "src": "typicons"
     },
     {
