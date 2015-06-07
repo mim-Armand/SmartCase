@@ -471,6 +471,204 @@ label.lbl-3 {
 /*--end-responsive-design--*/
 
 
+
+
+
+
+
+
+
+
+
+/*______________________________________________________________________________________*/
+
+/* Demo Styles */
+#content {
+  margin: 0 auto;
+  padding-bottom: 50px;
+  width: 80%;
+  max-width: 978px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+/* The Loader */
+#loader-wrapper {
+  -webkit-transition: none;
+  transition: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: hidden;
+}
+.no-js #loader-wrapper {
+  display: none;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #16a085;
+  -webkit-animation: spin 1.7s linear infinite;
+          animation: spin 1.7s linear infinite;
+  z-index: 11;
+}
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #e74c3c;
+  -webkit-animation: spin-reverse .6s linear infinite;
+          animation: spin-reverse .6s linear infinite;
+}
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #f9c922;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@keyframes spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+#loader-wrapper .loader-section {
+    transition: none;
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #222;
+  z-index: 10;
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+/* Loaded styles */
+.loaded #loader-wrapper .loader-section.section-left {
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+          transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded #loader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.3s 1s ease-out;
+          transition: all 0.3s 1s ease-out;
+}
+
+/*______________________________________________________________________________________*/
+
+*{
+    -webkit-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .little_text{
     font-size: 12px;
     color: gray;
@@ -540,7 +738,7 @@ label.lbl-3 {
     position: absolute;
     top: 30px;
     text-align: left;
-    color: #808080;
+    color: #ccc;
     font-size: 12px;
     left: 129px;
 }
@@ -570,6 +768,8 @@ label.lbl-3 {
 }
 .list_horiz>li{
     float: left;
+    width: 20%;
+    color: #888;
 }
 .luggage_info{
     font-size: 15px;
@@ -593,10 +793,125 @@ b{
 .detail_info>b{
     color: #999;
 }
+.noBorder{
+    border: none!important;
+}
+.prgrs_back{
+    width: 90%;
+    height: 4px;
+    display: block;
+    background: #666;
+    content: "";
+    margin: auto;
+}
+.prgrs_front{
+    width: 0%;
+    background: gold;
+    height: 100%;
+    display: block;
+}
+.prgrs_ticks{
+    width: 100%;
+    display: block;
+    /*background: rgba(150, 0, 0, .3);*/
+    content: "";
+    height: 20px;
+    margin-top: -12px;
+}
+.prgrs_tick{
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: #666;
+    float: left;
+    margin-right: 16%;
+    border-radius: 12px;
+}
+.prgrs_tick>.prgrs_tick_fill{
+    width: 20px;
+    height: 20px;
+    content: "";
+    display: block;
+    background: gold;
+    margin: 0;
+}
+.prgrs_tick>span{
+    width: 0px;
+    height: 0px;
+    border-radius: 12px;
+    margin: 10px;
+}
+.prgrs_tick.last_one{
+    margin-right: 0!important;
+    /*float: right;*/
+    position: absolute;
+    right: 12px;
+}
+.prgrs{
+    margin-top: 18px;
+    opacity: 0;
+}
+.checkinfo{
+    text-align: center;
+    margin: 0 0 12px 0;
+}
+.checkinfo>span{
+    margin: 0 18px 0 0;
+}
+#chckinTxt{
+    font-size: 21px;
+}
+/*______________________________________________________________________________________*/
+.win_txt{
+    color: #ccc;
+    margin: 15px;
+}
+.yesno_btns>button{
+    background: rgba(255,255,255,.3);
+    border-radius: 33px;
+    border: 1px solid white;
+    width: 45px;
+    height: 45px;
+    color: black;
+    
+    font-family: "fontello";
+    margin: 45px auto;
+    display: block;
+}
+.yesno_btns>button:before{
+    margin: -5px 0 0 -12px;
+    font-size: 54px;
+    color: #ccc;
+}
+.yesno_btns>.btn_yes{
+    background: green;
+}
+.yesno_btns>.btn_no{
+    background: darkred;
+}
+.lil_wins{
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: none;
+}
+.win_bg{
+    content: "";
+    background: rgba(222,222,222,.81);
+    width: 100%;
+    height: 900px;
+    position: fixed;
+    top: 0;
+}
 /*======================================================================================*/
 #page_start{
     
 }
 #page_login{
+    display: none;
+}
+#page_2{
     display: none;
 }
