@@ -4,7 +4,7 @@
     <Languages xmlns="">
         <Language code="en-US" />
     </Languages>
-    <App Author="HelloCordova author" BitsPerPixel="32" Description="Apache Cordova for Windows Phone" Genre="apps.normal" ProductID="{5715aaf0-0c46-11e5-bf84-e32dc8b203f4}" Publisher="HelloCordova" PublisherID="{db093ed5-53b1-45f7-af72-751e8f36ab80}" RuntimeType="Silverlight" Title="HelloCordova" Version="0.0.1" xmlns="">
+    <App Author="SmartCase author" BitsPerPixel="32" Description="Apache Cordova for Windows Phone" Genre="apps.normal" ProductID="{687a7e90-0ccf-11e5-92e5-d1b78bee71c6}" Publisher="SmartCase" PublisherID="{db093ed5-53b1-45f7-af72-751e8f36ab80}" RuntimeType="Silverlight" Title="SmartCase" Version="0.0.1" xmlns="">
         <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
         <Capabilities>
             <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
@@ -14,12 +14,12 @@
             <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
         </Tasks>
         <Tokens>
-            <PrimaryToken TaskName="_default" TokenID="HelloCordovaToken">
+            <PrimaryToken TaskName="_default" TokenID="SmartCaseToken">
                 <TemplateFlip>
                     <SmallImageURI IsRelative="true" IsResource="false">Background.png</SmallImageURI>
                     <Count>0</Count>
                     <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
-                    <Title>HelloCordova</Title>
+                    <Title>SmartCase</Title>
                     <BackContent />
                     <BackBackgroundImageURI />
                     <BackTitle />

@@ -43,10 +43,10 @@ function onDeviceReady() {
 }
 
 function showLoading(t) {
-  // $('body').removeClass('loaded');
-  // setTimeout(function() {
-  //     $('body').addClass('loaded');
-  // }, t);
+  $('body').removeClass('loaded');
+  setTimeout(function() {
+      $('body').addClass('loaded');
+  }, t);
 }
 
 function switchPages(o, i) {
