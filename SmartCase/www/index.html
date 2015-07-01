@@ -20,7 +20,7 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>SmartCase</title>
     </head>
-    <body onload="onBodyLoad()" class="loaded">
+    <body id="bod" onload="onBodyLoad()" class="loaded">
     <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////-->
     <div id="loader-wrapper">
       <div id="loader"></div>
@@ -65,11 +65,11 @@
                 <!-- <li><span class="detail_info">Baggage 1: <b>8 KG</b> - checked to dest.<br>Baggage 2: <b>18 KG</b> - checked to dest.</span></li> -->
                 <li><span class="list_icons">
                     <ul class="list_horiz">
-                        <li class="icon-doc-add" onclick="switchPages('', '#win_new')"></li>
-                        <li class="icon-taxi" onclick="switchPages('', '#win_taxi')"></li>
-                        <li class="icon-bus" onclick="switchPages('', '#win_bus')"></li>
-                        <li class="icon-wheelchair" onclick="switchPages('', '#win_asic')"></li>
-                        <li class="icon-beer" onclick="switchPages('', '#win_beer')"></li>
+                        <li id="lili1" class="icon-doc-add" onclick="switchPages('', '#win_new')"></li>
+                        <li id="lili2" class="icon-taxi" onclick="switchPages('', '#win_taxi')"></li>
+                        <li id="lili3" class="icon-bus" onclick="switchPages('', '#win_bus')"></li>
+                        <li id="lili4" class="icon-wheelchair" onclick="switchPages('', '#win_asic')"></li>
+                        <li id="lili5" class="icon-beer" onclick="switchPages('', '#win_beer')"></li>
                     </ul>
                 </span></li>
             </ul>
@@ -98,8 +98,8 @@
         <div class="win_txt">Do you need a Taxi?</div>
 
         <div class="yesno_btns">
-            <button type="" class="icon-ok-circled2 btn_yes" onclick="switchPages('#win_taxi', ''); alert('A taxi will wait for you on exit (5) in (7 Minutes).\n\nYou\'ll recieve an SMS when it get there.');"></button>
-            <button type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_taxi', '')"></button>
+            <button id="btn_jhjsfdfg" type="" class="icon-ok-circled2 btn_yes" onclick="switchPages('#win_taxi', ''); alert('A taxi will wait for you on exit (5) in (7 Minutes).\n\nYou\'ll recieve an SMS when it get there.');"></button>
+            <button id="btn_jdsyel" type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_taxi', '')"></button>
         </div>
             <button class="btn_footer"></button>
         </div>
@@ -114,8 +114,8 @@
         <div class="win_txt">Do you want to add a bag?</div>
 
         <div class="yesno_btns">
-            <button type="" class="icon-ok-circled2 btn_yes" onclick="switchPages('#win_new', ''); alert('Sorry!\n\nThis functionality will be added very soon!');"></button>
-            <button type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_new', '')"></button>
+            <button id="btn_jdsuksns" type="" class="icon-ok-circled2 btn_yes" onclick="switchPages('#win_new', ''); alert('Sorry!\n\nThis functionality will be added very soon!');"></button>
+            <button id="btn_kdkfdkfdj" type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_new', '')"></button>
         </div>
             <button class="btn_footer"></button>
         </div>
@@ -130,8 +130,8 @@
         <div class="win_txt">Would you like a drink?!<br><br>You can have a drink while waiting for your luggage!</div>
 
         <div class="yesno_btns">
-            <button type="" class="icon-star-circled btn_yes" onclick="switchPages('#win_beer', ''); alert('Please follow the directions to get a cold beverage!');"></button>
-            <button type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_beer', '')"></button>
+            <button id="btn_lsdjdhsj" type="" class="icon-star-circled btn_yes" onclick="switchPages('#win_beer', ''); alert('Please follow the directions to get a cold beverage!');"></button>
+            <button id="btn_jsdklfdskj" type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_beer', '')"></button>
         </div>
             <button class="btn_footer"></button>
         </div>
@@ -146,8 +146,8 @@
         <div class="win_txt">Do you need an assistant?</div>
 
         <div class="yesno_btns">
-            <button type="" class="icon-ok-circled2 btn_yes" onclick="switchPages('#win_asic', ''); alert('Please wait, we are on our way...');"></button>
-            <button type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_asic', '')"></button>
+            <button id="btn_kksdlfdsee" type="" class="icon-ok-circled2 btn_yes" onclick="switchPages('#win_asic', ''); alert('Please wait, we are on our way...');"></button>
+            <button id="btn_jjHFYHJVFjhg" type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_asic', '')"></button>
         </div>
             <button class="btn_footer"></button>
         </div>
@@ -162,8 +162,8 @@
         <div class="win_txt">Using Bus or Metro?<br><br>- Maps<br><br>- Tickets<br><br>- Routs</div>
 
         <div class="yesno_btns">
-            <button type="" class="icon-ok-circled2 btn_yes" onclick="switchPages('#win_bus', ''); alert('Sorry but ...\nOur commun transport API is under maintanance!');"></button>
-            <button type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_bus', '')"></button>
+            <button id="btn_jkldfkfdjl" type="" class="icon-ok-circled2 btn_yes" onclick="switchPages('#win_bus', ''); alert('Sorry but ...\nOur commun transport API is under maintanance!');"></button>
+            <button id="btn_jksjslljhvjh" type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_bus', '')"></button>
         </div>
             <button class="btn_footer"></button>
         </div>
@@ -179,7 +179,7 @@
 
         <div class="yesno_btns">
             <!-- <button type="" class="icon-ok-circled2 btn_yes" onclick="switchPages('#win_bus', ''); alert('Sorry but ...\nOur commun transport API is under maintanance!');"></button> -->
-            <button type="" class="icon-cancel-circled2-1 btn_no animate-spin" onclick=""></button>
+            <button id="btn_gjjskhdjdjhd" type="" class="icon-cancel-circled2-1 btn_no animate-spin" onclick=""></button>
         </div>
             <button class="btn_footer"></button>
         </div>
@@ -188,7 +188,7 @@
     <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////-->
     <div id="page_login">
         <div class="login-form">
-            <div class="close" onclick="switchPages('#page_login', '#page_start')"> </div>
+            <div id="kdfhgdlkfhgfdhgldf" class="close" onclick="switchPages('#page_login', '#page_start')"> </div>
                 <div class="head-info">
                 <span class="little_text">Login:</span>
                     <label class="lbl-1"> </label>
@@ -206,7 +206,7 @@
                                 </div>
                     </form>
             <div class="signin">
-            <button class="btn_footer" onclick="checkAuth()">
+            <button id="btn_dfkdfhjkfd" class="btn_footer" onclick="checkAuth()">
             Submit
                 </button>
             </div>

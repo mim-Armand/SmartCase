@@ -124,6 +124,42 @@ function finish(){
     switchPages( '', '#win_bye')
     setTimeout(function(){
         navigator.app.exitApp();
-    }, 999);
+    }, 1800);
 }
 // _______________________________________________________________________________________
+
+
+
+
+$("#bod").ready(function () { onBodyLoad(); });
+$("#lili1").click(function(){ switchPages('', '#win_new');});
+$("#lili2").click(function(){ switchPages('', '#win_taxi');});
+$("#lili3").click(function(){ switchPages('', '#win_bus');});
+$("#lili4").click(function(){ switchPages('', '#win_asic');});
+$("#lili5").click(function(){ switchPages('', '#win_beer');});
+
+$("#done_txt").click(function(){ finish();});
+
+$("#btn_login").click(function(){ switchPages('#page_start', '#page_login');});
+$("#btn_info").click(function(){ alert('this function is unavailable for now.\n\n\nplease try again later.');});
+$("#btn_suitcase").click(function(){ switchPages('', '#win_new');});
+
+$('#btn_jhjsfdfg').click(function(){switchPages('#win_taxi', ''); alert('A taxi will wait for you on exit (5) in (7 Minutes).\n\nYou\'ll recieve an SMS when it get there.');});
+$('#btn_jdsyel').click(function(){switchPages('#win_taxi', '');});
+
+$('#btn_jdsuksns').click(function(){switchPages('#win_new', ''); alert('Sorry!\n\nThis functionality will be added very soon!');});
+$('#btn_kdkfdkfdj').click(function(){switchPages('', '#win_new')});
+$('#btn_jdsyel').click(function(){switchPages('#win_new', '');});
+
+$('#btn_lsdjdhsj').click(function(){switchPages('#win_beer', ''); alert('Please follow the directions to get a cold beverage!');});
+$('#btn_jsdklfdskj').click(function(){switchPages('#win_beer', '');});
+
+$('#btn_kksdlfdsee').click(function(){switchPages('#win_asic', ''); alert('Please wait, we are on our way...');});
+$('#btn_jjHFYHJVFjhg').click(function(){switchPages('#win_asic', '');});
+
+
+$('#btn_jkldfkfdjl').click(function(){switchPages('#win_bus', ''); alert('Sorry but ...\nOur commun transport API is under maintanance!');});
+$('#btn_jksjslljhvjh').click(function(){switchPages('#win_bus', '');});
+
+$('#kdfhgdlkfhgfdhgldf').click(function(){switchPages('#page_login', '#page_start');});
+$('#btn_dfkdfhjkfd').click(function(){checkAuth();});

@@ -20,7 +20,15 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>SmartCase</title>
     </head>
-    <body onload="onBodyLoad()">
+    <body id="bod" onload="onBodyLoad()" class="loaded">
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+      
+    </div>
     <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////-->
     <div id="page_2">
         <div class="login-form">
@@ -33,26 +41,40 @@
             </div>
             <div class="head-info">
             <ul class="list">
-                <li><span class="icon-suitcase list_icons">x 2
+                <li id="cdg_ams"><span class="icon-suitcase list_icons">x 2
                     <p class="luggage_info">CDG - AMS (Direct)<br>
                     7658JHG7-JGH7-11
                     </p>
                 </span></li>
-                <li><span class="icon-fast-fw-outline list_icons"><small id="rushbag">Rush-Bag Premium <small>+Insurance</small></small></span></li>
-                <li><span class="icon-clock list_icons"> In: 5 min</span></li>
-                <li><span class="detail_info">Baggage 1: <b>8 KG</b> - checked to dest.<br>Baggage 2: <b>18 KG</b> - checked to dest.</span></li>
+                <!-- <li><span class="icon-fast-fw-outline list_icons"><small id="rushbag">Rush-Bag Premium <small>+Insurance</small></small></span></li> -->
+                <li class="noBorder" id="prgrs_li">
+                <div class="prgrs" id="prgs_cont">
+                    <span class="prgrs_back">
+                        <span id="prgrs_bar" class="prgrs_front"></span>
+                    </span>
+                <span class="prgrs_ticks" id="prgrs_tcks">
+                    <span class="prgrs_tick"><span class=""></span></span>
+                    <span class="prgrs_tick"><span class=""></span></span>
+                    <span class="prgrs_tick"><span class=""></span></span>
+                    <span class="prgrs_tick"><span class=""></span></span>
+                    <span class="prgrs_tick last_one"><span></span></span>
+                </span>
+                </div>
+                </li>
+                <li class="checkinfo"><span id="chckinIcn" class="list_icons  icon-ok-circled2"></span><span id="chckinTxt" class="list_icons">...</span></li>
+                <!-- <li><span class="detail_info">Baggage 1: <b>8 KG</b> - checked to dest.<br>Baggage 2: <b>18 KG</b> - checked to dest.</span></li> -->
                 <li><span class="list_icons">
                     <ul class="list_horiz">
-                        <li class="icon-doc-add"></li>
-                        <li class="icon-taxi"></li>
-                        <li class="icon-bus"></li>
-                        <li class="icon-wheelchair"></li>
-                        <li class="icon-beer" onclick="alert('test')"></li>
+                        <li id="lili1" class="icon-doc-add" onclick="switchPages('', '#win_new')"></li>
+                        <li id="lili2" class="icon-taxi" onclick="switchPages('', '#win_taxi')"></li>
+                        <li id="lili3" class="icon-bus" onclick="switchPages('', '#win_bus')"></li>
+                        <li id="lili4" class="icon-wheelchair" onclick="switchPages('', '#win_asic')"></li>
+                        <li id="lili5" class="icon-beer" onclick="switchPages('', '#win_beer')"></li>
                     </ul>
                 </span></li>
             </ul>
             </div>
-            <button class="btn_footer">Done!</button>            
+            <button id="done_txt" class="btn_footer" onclick="finish()"></button>            
         </div>
     </div>
     <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -61,16 +83,112 @@
         
         <div class="head-info"><span class="little_text">Please Login ...</span></div>
             
-            <button id="btn_login" type="" class="round_btn icon-key" onclick="switchPages('#page_start', '#page_login')"></button>
-            <button id="btn_info" type="" class="round_btn icon-info" onclick="closeCircleMenu(), aboutPage(true)"></button>
-            <button id="btn_suitcase" type="" class="round_btn icon-suitcase" onclick="closeCircleMenu(), aboutPage(true)"></button>
+            <button id="btn_login" type="" class="round_btn icon-key" onclick="switchPages('#page_start', '#page_login');"></button>
+            <button id="btn_info" type="" class="round_btn icon-info" onclick="alert('this function is unavailable for now.\n\n\nplease try again later.')"></button>
+            <button id="btn_suitcase" type="" class="round_btn icon-suitcase" onclick="switchPages('', '#win_new')"></button>
             <button class="btn_footer">I'm SmartCase!</button>
         </div>
     </div>
     <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div id="win_taxi" class="lil_wins">
+    <span class="win_bg"></span>
+        <div class="login-form">
+        
+        <div class="head-info"><span class="little_text">Taxi!</span></div>
+        <div class="win_txt">Do you need a Taxi?</div>
+
+        <div class="yesno_btns">
+            <button id="btn_jhjsfdfg" type="" class="icon-ok-circled2 btn_yes" onclick="switchPages('#win_taxi', ''); alert('A taxi will wait for you on exit (5) in (7 Minutes).\n\nYou\'ll recieve an SMS when it get there.');"></button>
+            <button id="btn_jdsyel" type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_taxi', '')"></button>
+        </div>
+            <button class="btn_footer"></button>
+        </div>
+
+    </div>
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div id="win_new" class="lil_wins">
+    <span class="win_bg"></span>
+        <div class="login-form">
+        
+        <div class="head-info"><span class="little_text">Add a New Bag!</span></div>
+        <div class="win_txt">Do you want to add a bag?</div>
+
+        <div class="yesno_btns">
+            <button id="btn_jdsuksns" type="" class="icon-ok-circled2 btn_yes" onclick="switchPages('#win_new', ''); alert('Sorry!\n\nThis functionality will be added very soon!');"></button>
+            <button id="btn_kdkfdkfdj" type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_new', '')"></button>
+        </div>
+            <button class="btn_footer"></button>
+        </div>
+
+    </div>
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div id="win_beer" class="lil_wins">
+    <span class="win_bg"></span>
+        <div class="login-form">
+        
+        <div class="head-info"><span class="little_text">Beer or coffee?!</span></div>
+        <div class="win_txt">Would you like a drink?!<br><br>You can have a drink while waiting for your luggage!</div>
+
+        <div class="yesno_btns">
+            <button id="btn_lsdjdhsj" type="" class="icon-star-circled btn_yes" onclick="switchPages('#win_beer', ''); alert('Please follow the directions to get a cold beverage!');"></button>
+            <button id="btn_jsdklfdskj" type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_beer', '')"></button>
+        </div>
+            <button class="btn_footer"></button>
+        </div>
+
+    </div>
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div id="win_asic" class="lil_wins">
+    <span class="win_bg"></span>
+        <div class="login-form">
+        
+        <div class="head-info"><span class="little_text">Assistance...</span></div>
+        <div class="win_txt">Do you need an assistant?</div>
+
+        <div class="yesno_btns">
+            <button id="btn_kksdlfdsee" type="" class="icon-ok-circled2 btn_yes" onclick="switchPages('#win_asic', ''); alert('Please wait, we are on our way...');"></button>
+            <button id="btn_jjHFYHJVFjhg" type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_asic', '')"></button>
+        </div>
+            <button class="btn_footer"></button>
+        </div>
+
+    </div>
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div id="win_bus" class="lil_wins">
+    <span class="win_bg"></span>
+        <div class="login-form">
+        
+        <div class="head-info"><span class="little_text">Bus & Metro</span></div>
+        <div class="win_txt">Using Bus or Metro?<br><br>- Maps<br><br>- Tickets<br><br>- Routs</div>
+
+        <div class="yesno_btns">
+            <button id="btn_jkldfkfdjl" type="" class="icon-ok-circled2 btn_yes" onclick="switchPages('#win_bus', ''); alert('Sorry but ...\nOur commun transport API is under maintanance!');"></button>
+            <button id="btn_jksjslljhvjh" type="" class="icon-cancel-circled2-1 btn_no" onclick="switchPages('#win_bus', '')"></button>
+        </div>
+            <button class="btn_footer"></button>
+        </div>
+
+    </div>
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div id="win_bye" class="lil_wins">
+    <span class="win_bg"></span>
+        <div class="login-form">
+        
+        <div class="head-info"><span class="little_text">Safe Trip !</span></div>
+        <div class="win_txt">Fare-De-Well !<br><br>Have a safe trip, ;)</div>
+
+        <div class="yesno_btns">
+            <!-- <button type="" class="icon-ok-circled2 btn_yes" onclick="switchPages('#win_bus', ''); alert('Sorry but ...\nOur commun transport API is under maintanance!');"></button> -->
+            <button id="btn_gjjskhdjdjhd" type="" class="icon-cancel-circled2-1 btn_no animate-spin" onclick=""></button>
+        </div>
+            <button class="btn_footer"></button>
+        </div>
+
+    </div>
+    <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////-->
     <div id="page_login">
         <div class="login-form">
-            <div class="close" onclick="switchPages('#page_login', '#page_start')"> </div>
+            <div id="kdfhgdlkfhgfdhgldf" class="close" onclick="switchPages('#page_login', '#page_start')"> </div>
                 <div class="head-info">
                 <span class="little_text">Login:</span>
                     <label class="lbl-1"> </label>
@@ -88,7 +206,7 @@
                                 </div>
                     </form>
             <div class="signin">
-            <button class="btn_footer" onclick="checkAuth()">
+            <button id="btn_dfkdfhjkfd" class="btn_footer" onclick="checkAuth()">
             Submit
                 </button>
             </div>
